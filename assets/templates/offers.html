@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<div data-gridster-item data-size-x="{{position[$index % 10].size.x}}" data-size-y="{{position[$index % 10].size.y}}" ng-repeat="item in results" title="{{ item.title }}" class="offers__item">
+	<div class="offers__image">
+		<img height="100" ng-if="$index % 10 === 0" src="https://staging.remontnik.ru/{{ item.images[0].image_large }}" alt="" class="imageloaded">
+		<img height="100" ng-if="$index % 10 === 5 || $index % 10 === 7" src="https://staging.remontnik.ru/{{ item.images[0].image_medium }}" alt="" class="imageloaded">
+		<img height="100" ng-if="$index % 10 !== 5 &amp;&amp; $index % 10 !== 7 &amp;&amp; $index % 10 !== 0" src="https://staging.remontnik.ru/{{ item.images[0].image_small }}" alt="" class="imageloaded">
+	</div>
+	<div class="offers__caption"><span ng-if="$index % 10 === 0" class="offers__contractor-ico"></span>
+		<div data-ng-class="$index % 10 !== 0 &amp;&amp; &quot;_not-ico&quot;" class="offers__contractor">
+			<h2 ng-if="$index % 10 === 0 || $index % 10 === 5" class="offers__contractor-name">{{ item.contractor.full_name }}<span ng-if="item.contractor.is_documents_confirmed" class="offers__confirmed"></span></h2>
+			<h3 class="offers__title">{{ item.title }}</h3>
+		</div><span ng-if="$index % 10 === 0" class="offers__photos">{{ item.images.length }}</span>
+	</div>
+</div>
