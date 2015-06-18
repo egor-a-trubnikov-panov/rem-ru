@@ -3,7 +3,6 @@
 
 	angular.module('app', ['gridster']);
 
-
 	angular.module('app')
 		.service('offersService', function ($http) {
 			return {

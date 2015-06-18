@@ -55,10 +55,18 @@
     "require-dir": "^0.1.0",
     "run-sequence": "^1.0.2",
     "rupture": "^0.6.1"
-  }
+  },
+  "browsers": {
+    "android": 4,
+    "chrome": 40,
+    "firefox": 35,
+    "ie": 10,
+    "ios": 7,
+    "opera": 27,
+    "safari": 7
+  },
   "dependencies": {
-    "angular": "^1.4.1",
-    "angular-gridster": "^0.13.3"
+    "angular": "^1.4.1"
   },
   "scripts": {
     "start": "npm i && gulp build && gulp --debug --beep --open"
