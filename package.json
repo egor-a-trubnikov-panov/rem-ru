@@ -66,7 +66,8 @@
     "safari": 7
   },
   "dependencies": {
-    "angular": "^1.4.1"
+    "angular": "^1.4.1",
+    "angular-gridster": "^0.13.3"
   },
   "scripts": {
     "start": "npm i && gulp build && gulp --debug --beep --open"
